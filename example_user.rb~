@@ -1,0 +1,15 @@
+class User
+	#name, emailに対応するアトリビュートアクセサを作成
+	attr_accessor :name, :email
+
+	#"initialize"は最初に呼び出されるメソッド（デフォルト値を設定）
+	dif initialize(attributes = {})
+		@name = attributes[:name]
+		@email = atributes[:email]
+	end
+
+	#@name, @emailの値からユーザのメールアドレスとして構成
+	def formatted_email
+		"#{@name} <#{@email}>"
+	end
+end
